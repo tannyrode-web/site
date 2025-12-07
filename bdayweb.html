@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday 🎂❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #ffecd2, #fcb69f);
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 24px;
+      padding: 24px 20px 30px;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .emoji {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #e11d48;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-block;
+      padding: 9px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      margin: 4px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #fb7185, #f97316);
+      color: #fefce8;
+      box-shadow: 0 10px 22px rgba(248, 113, 113, 0.5);
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-yes {
+      background: linear-gradient(135deg, #4ade80, #22c55e);
+      color: #064e3b;
+      box-shadow: 0 10px 22px rgba(34, 197, 94, 0.5);
+    }
+
+    .btn-no {
+      background: #fee2e2;
+      color: #b91c1c;
+      box-shadow: 0 10px 22px rgba(248, 113, 113, 0.5);
+    }
+
+    .btn:hover,
+    .btn-secondary:hover,
+    .btn-yes:hover,
+    .btn-no:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 12px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- PAGE 1: Birthday greeting -->
+    <div class="page active" id="page1">
+      <div class="emoji">🎉🎂✨</div>
+      <div class="title">Happy Birthday Chuimui 💕</div>
+      <div class="name">From: [Your Bokya 😼]</div>
+
+      <div class="text">
+        Since you’re a December baby, I’m guessing your parents had a very successful Valentine’s week 😂<br>
+Jokes aside, Happiest birthday to you!<br>
+Thanks for always listening & understanding me somehow 😭❤️
+Thankyou so much <3 <br>
+God’s plan, baby 💌
+    
+      </div>
+
+      <button class="btn" onclick="showPage('page2')">
+        Touch Me 😩
+      </button>
+
+      <div class="note">
+        (Dba na upper wali button jaldi 😌)
+      </div>
+    </div>
+
+    <!-- PAGE 2: Proposal asking / build-up -->
+    <div class="page" id="page2">
+      <div class="emoji">🫣💬</div>
+      <div class="title">Okay, real talk now…</div>
+
+      <div class="text">
+        I know today is your birthday, and I should only be talking about cake, gifts and wishes…  
+        but there’s something I’ve been wanting to say for a while🫣
+        <br /><br />
+        I never got the chance to propose to you properly… and what better day than your birthday to finally do it 😌
+      </div>
+
+      <button class="btn-secondary" onclick="showPage('page1')">
+        ⬅ Back
+      </button>
+      <button class="btn" onclick="showPage('page3')">
+        Okay, I’m listening ➜
+      </button>
+    </div>
+
+    <!-- PAGE 3: Yes or No -->
+    <div class="page" id="page3">
+      <div class="emoji">💍💗</div>
+      <div class="title">So here it is…</div>
+
+      <div class="text">
+        So when we first met online, you seemed totally normal to me… <br>
+But the moment I saw you face to face, my heartbeat sped up, and the first thought I had was<br>
+YAAR YEH KITNI SUNDAR HAI!<br>
+Turns out you are so NOOB at taking pictures (ofc Yours only)
+        <br /><br />
+        So on your birthday, I just want to ask you one thing:
+      </div>
+
+      <div class="question">
+        Will you be my Girlfriend?😭<br />
+        (Officially. Fully. Properly. 💍)
+      </div>
+
+      <div>
+        <button class="btn-yes" onclick="showPage('page4')">
+          Yes 💚
+        </button>
+        <button class="btn-no" onclick="showPage('page5')">
+          No 💔
+        </button>
+      </div>
+
+      <div class="note">
+        *Choose wisely. Aisa mauka Baar Baar nh milega*
+      </div>
+    </div>
+
+    <!-- PAGE 4: If YES -->
+    <div class="page" id="page4">
+      <div class="emoji">🎉💍😍</div>
+      <div class="title">Best. Answer. Ever.</div>
+
+      <div class="text">
+        Mujhe pta tha tu HAA hie bolegi <br>
+        Afterall I am from Dharampeth (inside jk IYKUK) 😌
+        <br /><br />
+        RUKH RUKH RUKH!!!
+        Thoda romance baki hai 
+      </div>
+
+      <a
+  class="btn"
+  href="https://www.youtube.com/watch?v=2Vv-BfVoq4g&start=36&autoplay=1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Play our song 🎵
+</a>
+
+        
+
+      <button class="btn-secondary" onclick="showPage('page1')">
+        Start again ⟲
+      </button>
+
+      <div class="note">
+        P.S. This is valid in real life too, not just on this website. Don’t forget. 😏
+      </div>
+    </div>
+
+    <!-- PAGE 5: If NO (wrong button message, then send to page 4) -->
+    <div class="page" id="page5">
+      <div class="emoji">😱💔</div>
+      <div class="title">I think you clicked the wrong button…</div>
+
+      <div class="text">
+       Kya re itni ky ghai ki galat button dabaa di?<br>
+       batau ky teko 
+        <br /><br />
+        Sach sach bta tujhe koi aur toh nahi pasnd na??😞<br>
+        Chal tujhe aur ek chance deta hu is baar galti mat karna 😤
+      </div>
+
+      <button class="btn" onclick="showPage('page4')">
+        Iss baar shai button daba 😌
+      </button>
+
+      
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      const page = document.getElementById(pageId);
+      if (page) {
+        page.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
